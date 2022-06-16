@@ -2,8 +2,10 @@ import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 
 // eslint-disable-next-line prettier/prettier
+import "./database";
 import { router } from './routes';
 import swaggerFile from './swagger.json';
+
 
 const app = express();
 
