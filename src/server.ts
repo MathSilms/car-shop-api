@@ -3,6 +3,9 @@ import swaggerUi from 'swagger-ui-express';
 
 // eslint-disable-next-line prettier/prettier
 import "./database";
+
+import "./shared/container";
+
 import { router } from './routes';
 import swaggerFile from './swagger.json';
 
