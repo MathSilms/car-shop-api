@@ -4,7 +4,6 @@ import { container } from "tsyringe";
 import { CreateCategoryUseCase } from './CreateCategoryUseCase';
 
 class CreateCategoryController {
-    // constructor(private createCategoryUserCase: CreateCategoryUseCase) {}
     async handle(req: Request, res: Response): Promise<Response> {
         const { name, description } = req.body;
 
