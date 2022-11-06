@@ -1,8 +1,9 @@
+import "reflect-metadata";
 import express, { NextFunction, Response, Request } from 'express';
 import swaggerUi from 'swagger-ui-express';
 import "express-async-errors";
 // eslint-disable-next-line prettier/prettier
-import "./database";
+import createConnection from "../typeorm";
 
 import "./shared/container";
 
@@ -11,6 +12,7 @@ import swaggerFile from './swagger.json';
 import { AppError } from './errors/appError';
 
 
+createConnection();
 const app = express();
 
 app.use(express.json());
