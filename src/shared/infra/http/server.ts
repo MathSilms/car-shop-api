@@ -5,11 +5,11 @@ import "express-async-errors";
 // eslint-disable-next-line prettier/prettier
 import createConnection from "../typeorm";
 
-import "./shared/container";
+import "@shared/container";
 
 import { router } from './routes';
-import swaggerFile from './swagger.json';
-import { AppError } from './errors/appError';
+import swaggerFile from '../../../swagger.json';
+import { AppError } from '@shared/errors/appError';
 
 
 createConnection();
