@@ -2,13 +2,13 @@ import express, { NextFunction, Response, Request } from 'express';
 import swaggerUi from 'swagger-ui-express';
 import "express-async-errors";
 // eslint-disable-next-line prettier/prettier
-import "./database";
+import "../typeorm";
 
-import "./shared/container";
+import "@shared/container";
 
 import { router } from './routes';
-import swaggerFile from './swagger.json';
-import { AppError } from './errors/appError';
+import swaggerFile from '../../../swagger.json';
+import { AppError } from '@shared/errors/appError';
 
 
 const app = express();

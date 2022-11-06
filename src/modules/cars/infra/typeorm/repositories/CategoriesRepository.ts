@@ -1,9 +1,9 @@
-import { Category } from '../../entities/Category';
+import { Category } from '../Category';
 
 import {
     ICategoriesRepository,
     ICreateCategoryDTO,
-} from '../ICategoriesRepository';
+} from '../../../repositories/ICategoriesRepository';
 
 import { getRepository, Repository } from 'typeorm';
 
@@ -23,8 +23,8 @@ class CategoriesRepository implements ICategoriesRepository {
   
         const category = this.repository.create({
             description,
-            name,
-        })
+            name
+        });
         // this.categories.push(category);
         await this.repository.save(category);
     }
