@@ -23,7 +23,7 @@ class SpecificationsRepository implements ISpecificationRepository {
 
     async findByName(name: string): Promise<Specification> {
         
-        const specification = await this.repository.findOne({name});
+        const specification = await this.repository.findOneBy({name});
 
         return specification;
     }
