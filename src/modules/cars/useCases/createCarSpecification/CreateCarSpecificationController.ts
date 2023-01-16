@@ -5,7 +5,6 @@ import { CreateCarSpecificationUseCase } from "./CreateCarSpecificationUseCase";
 
 class CreateCarSpecificationController {
     async handle(req: Request, res: Response) {
-        console.log("testeeteteteet")
         const { id } = req.params;
         const { specifications_id } = req.body;
 
