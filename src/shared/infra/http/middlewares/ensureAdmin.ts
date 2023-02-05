@@ -15,15 +15,7 @@ const { id } = req.user;
 
 const usersRepository = new UsersRepository();
 
-console.log("-----------")
-    console.log("usersRepository:",usersRepository)
-    console.log("-----------")
-
 const user = await usersRepository.findById(id);
-
-console.log("-----------")
-console.log("user:",user)
-console.log("-----------")
 
 if(!user.isAdmin) throw new AppError("User isn't admin!")
 
