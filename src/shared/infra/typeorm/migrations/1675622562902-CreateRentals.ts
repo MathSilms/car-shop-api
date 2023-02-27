@@ -8,10 +8,11 @@ export class CreateRentals1675615641950 implements MigrationInterface {
             columns: [
                 { name: "id", type: "uuid", isPrimary: true },
                 { name: "car_id", type: "uuid" },
+                { name: "user_id", type: "uuid" },
                 { name: "start_date", type: "timestamp", default: "now()" },
-                { name: "end_date", type: "timestamp" },
+                { name: "end_date", type: "timestamp", isNullable:true },
                 { name: "expected_return_date", type: "timestamp" },
-                { name: "total", type: "numeric" },
+                { name: "total", type: "numeric", isNullable:true},
                 { name: "created_at", type: "timestamp", default: "now()" },
                 { name: "updated_at", type: "timestamp", default: "now()" }
             ],
@@ -30,8 +31,8 @@ export class CreateRentals1675615641950 implements MigrationInterface {
                     referencedColumnNames: ["id"],
                     columnNames: ["user_id"],
                     onDelete: "SET NULL",
-                    onUpdate: "SET NULL"
-                },
+                    onUpdate: "SET NULL",
+                }
             ]
         }));
     }
