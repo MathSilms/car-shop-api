@@ -15,7 +15,7 @@ async function create() {
         `
     )
 
-    await connection.destroy();
+    await connection.close();
 }
 
 create().then(() => {
